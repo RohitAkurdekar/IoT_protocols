@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="display"></p>
+
+<script>
+var parser, xmlDoc;
+var text = "<cdac><course>" +
+"<name>Internet of Things</name>" +
+"<center>PUNE</center>" +
+"<year>2005</year>" +
+"</course></cdac>";
+
+parser = new DOMParser();
+xmlDoc = parser.parseFromString(text,"text/xml");
+
+document.getElementById("display").innerHTML =
+xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+</script>
+
+</body>
+</html>
