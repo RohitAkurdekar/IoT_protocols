@@ -62,3 +62,5 @@ function processCommand(command) {
     leaveGame(!gameOver ? 'Woah your opponent bailed' : '');
   }
 }
+
+
