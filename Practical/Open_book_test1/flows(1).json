@@ -1,0 +1,146 @@
+[
+    {
+        "id": "a26bdf119f5182d6",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b572417355ab715a",
+        "type": "http request",
+        "z": "a26bdf119f5182d6",
+        "name": "GET_Request",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://localhost:3000/sensorval",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "basic",
+        "senderr": false,
+        "headers": [],
+        "x": 280,
+        "y": 180,
+        "wires": [
+            [
+                "701888405283b25f"
+            ]
+        ]
+    },
+    {
+        "id": "14efbca5cd28e3d9",
+        "type": "debug",
+        "z": "a26bdf119f5182d6",
+        "name": "debug 10",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "value",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "ea66f95b1b204f9d",
+        "type": "inject",
+        "z": "a26bdf119f5182d6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 250,
+        "y": 100,
+        "wires": [
+            [
+                "b572417355ab715a"
+            ]
+        ]
+    },
+    {
+        "id": "bebf236200b8f166",
+        "type": "ui_gauge",
+        "z": "a26bdf119f5182d6",
+        "name": "",
+        "group": "91b5a4dfe69a70d4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "abc",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 530,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "701888405283b25f",
+        "type": "function",
+        "z": "a26bdf119f5182d6",
+        "name": "function 6",
+        "func": "msg.value=msg.payload.value\nconsole.log(msg.value)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 320,
+        "wires": [
+            [
+                "bebf236200b8f166",
+                "14efbca5cd28e3d9"
+            ]
+        ]
+    },
+    {
+        "id": "91b5a4dfe69a70d4",
+        "type": "ui_group",
+        "name": "Button",
+        "tab": "1d512a96d613a21a",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1d512a96d613a21a",
+        "type": "ui_tab",
+        "name": "Login",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
