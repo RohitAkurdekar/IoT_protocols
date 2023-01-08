@@ -2,5 +2,5 @@
 
 * MQTT
 * WebSocket
-*CoAP
+* CoAP
 * HTTP RESTful service
