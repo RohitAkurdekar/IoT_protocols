@@ -6,22 +6,16 @@ const PORT = '1883';
 
 const publisher = mqtt.connect(HOST + PORT,{
     clean:false,
-    clientId:"diot001",
-    username:'diot',
-    password:'diot',
+    clientId:"iot001",
     will:{
-        topic:'cdac/device/dead',
+        topic:'akurdekar/device/dead',
         payload:'diot001',
         qos:2,
         retain:true            
     }    
 });
 
-// MQTT Topic to Publish data to
-// const TOPIC = 'cdac/sensor1/diot';
-// const TOPIC = 'cdac/sensor2/diot';
-// const TOPIC = 'cdac/sensor3/abc/diot';
-const TOPIC = 'cdac/rohit/sensor';
+const TOPIC = 'akurdekar/rohit/sensor';
 
 
 // Event to Check BROKER connection
