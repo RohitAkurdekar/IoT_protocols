@@ -7,22 +7,17 @@ const PORT = '1883';
 const subscriber = mqtt.connect(HOST + PORT,{
     protocolId:"MQTT",
     protocolVersion:4,
-    username:'diot',
-    password:'diot',
     clean:false,
     clientId:"diot002",
     qos:2
 });
 
 // MQTT Topic to Publish data to
-// const TOPIC = 'cdac/diot';
-//  const TOPIC = 'cdac/#';   // Read all topics from publisher/broker starting from cdac
- 
-const TOPIC = 'cdac/rohit/sensor';
+const TOPIC = 'akurdekar/rohit/sensor';
 
 
-//const TOPIC = 'cdac/+/diot';
-const WILL_TOPIC = "cdac/device/dead"
+
+const WILL_TOPIC = "akurdekar/device/dead"
 
 // Event to Check BROKER connection
 subscriber.on('connect',()=>{
