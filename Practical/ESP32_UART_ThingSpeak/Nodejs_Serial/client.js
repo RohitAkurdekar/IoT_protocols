@@ -10,8 +10,9 @@ const URL="https://api.thingspeak.com/update.json"
 
 
 const REQUEST_BODY = {
-    api_key: "6YXQKBOP80VVCRUU",
+    api_key: "<Your_API_key>",
     field1: myHumid
+    
 }
 
 
