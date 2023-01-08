@@ -1,5 +1,13 @@
 # MQTT using MOSQUITTO
 
+Run following commands before executing js files
+
+      $ npm init --yes
+            
+<br>
+            
+      $ npm install
+
 Run Mosquitto broker on local machine.
 
 <h2>Download and Install Mosquitto broker</h2>
@@ -17,6 +25,8 @@ Setup mosquitto broker
 
       $ cd ~/Downloads/mosquitto-2.0.15/
       
+<br>
+
       $ make
                   
       
@@ -28,6 +38,8 @@ If any missing library found, then install that library
 Run Mosquitto broker
   
       $ cd ~/Downloads/mosquitto-2.0.15/src/
+      
+<br>
       
       $ ./mosquitto
       
